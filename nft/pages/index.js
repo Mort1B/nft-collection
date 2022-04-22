@@ -1,6 +1,6 @@
 import { Contract, providers, utils } from "ethers";
 import Head from "next/head";
-import React, { useEffect, useRef, useState } from React;
+import React, { useEffect, useRef, useState } from "react";
 import Web3Modal, { getProviderDescription } from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../../hardhat-tut/constants";
 import styles from "../styles/Home.module.css";
@@ -19,7 +19,7 @@ export default function Home() {
   // tokenIdsMinted keeps track of the number of tokenIds that have been minted
   const [tokenIdsMinted, setTokenIdsMinted] = useState("0");
   // Create a reference to the Web3 Modal (used for connecting to Metamask) which persists as long as the page is open
-  const Web3ModalRef = useRef();
+  const web3ModalRef = useRef();
 
   /**
    * presaleMint: Mint an NFT during the presale
