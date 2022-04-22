@@ -1,3 +1,4 @@
+// contracts/CryptoDevs.sol
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
@@ -10,7 +11,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
         @dev _baseTokenURI for computing {tokenURI}. If set, the resulting URI for each 
         token will be the concatenation of the `baseURI` and the `tokenId`
      */
-    string baseTokenURI;
+    string _baseTokenURI;
 
     // _price is price of one NFT
     uint256 public _price = 0.01 ether;
